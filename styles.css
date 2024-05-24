@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('./tic-tac-toe.jpg');
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background */
+}
+
+.container {
+  text-align: center;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#mode-selection {
+  margin-bottom: 30px;
+}
+
+#mode-selection button {
+  font-size: 18px;
+  padding: 12px 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#mode-selection button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#game-board {
+  display: none;
+}
+
+#game-board.active {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 0;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.10);
+}
+
+.cell.X {
+  background-color: #f44336; /* Red color for X */
+}
+
+.cell.O {
+  background-color: #4CAF50; /* Green color for O */
+}
+
+@keyframes xAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes oAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#status {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.winning-percentage {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+  display: none;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#restart-btn, #home-btn {
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #3675f4;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#restart-btn:hover, #home-btn:hover {
+  background-color: #319a00;
+  transform: scale(1.05);
+}
